@@ -20,3 +20,27 @@
 .footer > div {
     padding: 10px;
 }
+
+.pages-list-container {
+    margin: 25px 0;
+}
+
+.pages-list-group {
+    margin: 20px 0;
+}
+
+.pages-list-group > label {
+    font-weight: bold;
+}
+
+.vulnerability-info-container {
+    margin: 15px 0;
+}
+
+.vulnerability-info-container > div {
+    font-weight: bold;
+}
+
+.value-container {
+    margin: 20px 0;
+}

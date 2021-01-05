@@ -14,10 +14,13 @@
         <div>
             This page puts the value of a query parameter ("xss") into backticks quotes inside a script tag.
         </div>
+        <div class="vulnerability-info-container">
+            <label>Has XSS vulnerability:</label>
+            <div>Yes</div>
+        </div>
     </div>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>Value:</label>
         <div id="main"></div>
 

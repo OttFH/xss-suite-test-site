@@ -15,10 +15,13 @@
             This page sets the value of a query parameter ("xss") as innerText of a div tag.
             This is done in JavaScript, not in PHP.
         </div>
+        <div class="vulnerability-info-container">
+            <label>Has XSS vulnerability:</label>
+            <div>No</div>
+        </div>
     </div>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>Value:</label>
         <div id="main"></div>
 

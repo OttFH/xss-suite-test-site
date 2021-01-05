@@ -14,11 +14,15 @@
         <div>
             This page puts the value of the query parameter ("xss") into a comment.
         </div>
+        <div class="vulnerability-info-container">
+            <label>Has XSS vulnerability:</label>
+            <div>Yes</div>
+        </div>
     </div>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>Comment:</label>
+        <br>
         <!-- <?= $_GET['xss'] ?> -->
         Open source code of page to see it.
     </div>

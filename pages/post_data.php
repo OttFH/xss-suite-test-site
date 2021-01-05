@@ -17,8 +17,7 @@
         </div>
     </div>
 
-    <br>
-    <form method="post">
+    <form class="value-container" method="post">
         <label>
             XSS:
             <input name="xss" value="">

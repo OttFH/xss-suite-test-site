@@ -13,11 +13,14 @@
         <h2>Description</h2>
         <div>
             This page puts the value of the query parameter ("xss") into a div tag.
+            <br>
+            <br>
+            <label>Has XSS vulnerability:</label>
+            <div>Yes</div>
         </div>
     </div>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>Value:</label>
         <div><?= $_GET['xss'] ?></div>
     </div>

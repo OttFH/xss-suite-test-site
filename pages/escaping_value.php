@@ -13,12 +13,15 @@
         <h2>Description</h2>
         <div>
             This page puts the escaped value of the query parameter ("xss") into the value attribute of a value tag.
-            To escape the value the PHP function "htmlspecialchars" is used
+            To escape the value the PHP function "htmlspecialchars" is used.
+        </div>
+        <div class="vulnerability-info-container">
+            <label>Has XSS vulnerability:</label>
+            <div>No</div>
         </div>
     </div>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>
             Value:
             <input name="xss" value="<?= htmlspecialchars($_GET['xss']) ?>">

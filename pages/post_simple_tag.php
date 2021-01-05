@@ -14,10 +14,13 @@
         <div>
             This page puts the value of the post parameter ("xss") into a div tag.
         </div>
+        <div class="vulnerability-info-container">
+            <label>Has XSS vulnerability:</label>
+            <div>Yes</div>
+        </div>
     </div>
 
-    <br>
-    <form method="post">
+    <form class="value-container" method="post">
         <label>
             XSS:
             <input name="xss" value="">
@@ -25,8 +28,7 @@
         <button type="submit">POST</button>
     </form>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>Value:</label>
         <div><?= $_POST['xss'] ?></div>
     </div>
