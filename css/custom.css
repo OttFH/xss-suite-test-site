@@ -1,0 +1,18 @@
+.container {
+    width: 1000px;
+    margin: 15px auto;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+.footer > div {
+    padding: 10px;
+}
