@@ -44,13 +44,13 @@
         <div>
             <label>Escaping</label>
             <div>
-                <a href="pages/simple_tag.php?xss=234">Tag</a>
+                <a href="pages/escaping_tag.php?xss=234">Tag</a>
             </div>
             <div>
-                <a href="pages/simple_value.php?xss=234">Value</a>
+                <a href="pages/escaping_value.php?xss=234">Value</a>
             </div>
             <div>
-                <a href="pages/simple_comment.php?xss=234">Comment</a>
+                <a href="pages/escaping_comment.php?xss=234">Comment</a>
             </div>
         </div>
 
