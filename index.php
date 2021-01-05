@@ -67,6 +67,20 @@
                 <a href="pages/script_backticks_quote_text.php?xss=234">Backticks</a>
             </div>
         </div>
+
+        <br>
+        <div>
+            <label>POST</label>
+            <div>
+                <a href="pages/post_simple_tag.php">Tag</a>
+            </div>
+            <div>
+                <a href="pages/post_data.php">Post Data</a>
+            </div>
+            <div>
+                <a href="pages/post_read_data.php">Read Data</a>
+            </div>
+        </div>
     </div>
 </div>
 
