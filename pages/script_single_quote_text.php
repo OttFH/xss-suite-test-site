@@ -6,6 +6,8 @@
 <body>
 
 <div class="container">
+    <?php include('./../layout/to_home.php') ?>
+
     <h1>Script Single Quotes</h1>
     <div>
         <h2>Description</h2>
