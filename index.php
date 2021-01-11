@@ -41,6 +41,9 @@
             <div>
                 <a href="pages/simple_innerText.php?xss=234">innerText</a>
             </div>
+            <div>
+                <a href="pages/simple_eval.php?xss=234">Eval</a>
+            </div>
         </div>
 
         <div class="pages-list-group">
