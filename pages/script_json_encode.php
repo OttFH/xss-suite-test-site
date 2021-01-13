@@ -8,12 +8,12 @@
 <div class="container">
     <?php include('./../layout/to_home.php') ?>
 
-    <h1>Script Single Quotes</h1>
+    <h1>Script JSON Encoding</h1>
     <div>
         <h2>Description</h2>
         <div>
-            This page puts the value of a query parameter ("xss") into single quotes inside a script tag,
-            but escapes single quotes and backslashes.
+            This page encodes the value of a query parameter ("xss") with the json_decode function of PHP and
+            puts the result into a script tag, where it gets set as innerText.
         </div>
         <div class="vulnerability-info-container">
             <label>Has XSS vulnerability:</label>
@@ -26,7 +26,7 @@
         <div id="main"></div>
 
         <script>
-            var xss = "<?= str_replace('\'', '\\\'', str_replace('\\', '\\\\', $_GET['xss']))?>";
+            var xss = <?= json_encode($_GET['xss'])?>;
             document.getElementById('main').innerText = xss;
         </script>
     </div>

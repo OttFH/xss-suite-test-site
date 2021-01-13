@@ -71,7 +71,7 @@
                 <a href="pages/script_backticks_quote_text.php?xss=234">Backticks</a>
             </div>
             <div>
-                <a href="pages/script_filter_single_quote_text.php?xss=234">Filter Single</a>
+                <a href="pages/script_json_encode.php?xss=234">JSON Encode</a>
             </div>
         </div>
 
