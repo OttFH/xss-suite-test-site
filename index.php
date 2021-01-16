@@ -57,6 +57,9 @@
             <div>
                 <a href="pages/escaping_comment.php?xss=234">Comment</a>
             </div>
+            <div>
+                <a href="pages/escaping_onload.php?xss=234">Event Handler</a>
+            </div>
         </div>
 
         <div class="pages-list-group">
