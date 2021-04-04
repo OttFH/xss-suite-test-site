@@ -13,10 +13,13 @@
         <h2>Description</h2>
         <div>
             This page puts the value of the query parameter ("xss") into a div tag.
-            <br>
-            <br>
+        </div>
+        <div class="vulnerability-info-container">
             <label>Has XSS vulnerability:</label>
             <div>Yes</div>
+            <button onclick="window.location = '/pages/simple_tag.php?xss=<script>alert(1)</script>'">
+                Example
+            </button>
         </div>
     </div>
 

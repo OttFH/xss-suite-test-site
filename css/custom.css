@@ -37,8 +37,17 @@
     margin: 15px 0;
 }
 
+.vulnerability-info-container > label {
+    font-weight: bold;
+    font-size: 13pt;
+}
+
 .vulnerability-info-container > div {
     font-weight: bold;
+}
+
+.vulnerability-info-container > button {
+    margin-top: 5pt;
 }
 
 .value-container {

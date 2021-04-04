@@ -17,6 +17,9 @@
         <div class="vulnerability-info-container">
             <label>Has XSS vulnerability:</label>
             <div>Yes</div>
+            <button onclick="window.location = '/pages/simple_comment.php?xss=--><script>alert(1)</script><!--'">
+                Example
+            </button>
         </div>
     </div>
 
