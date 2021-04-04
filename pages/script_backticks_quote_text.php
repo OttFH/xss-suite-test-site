@@ -12,7 +12,8 @@
     <div>
         <h2>Description</h2>
         <div>
-            This page puts the value of a query parameter ("xss") into backticks quotes inside a script tag.
+            This page puts the escaped value of a query parameter ("xss") into backticks quotes inside a script tag.
+            To escape the value the PHP function "htmlspecialchars" is used.
         </div>
         <div class="vulnerability-info-container">
             <label>Has XSS vulnerability:</label>
@@ -25,8 +26,8 @@
         <div id="main"></div>
 
         <script>
-            var xss = `<?= $_GET['xss'] ?>`;
-            document.getElementById('main').innerText = xss;
+            var xss = `<?= htmlspecialchars($_GET['xss']) ?>`;
+            document.getElementById('main').innerHTML = xss;
         </script>
     </div>
 </div>
