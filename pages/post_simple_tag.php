@@ -17,9 +17,11 @@
         <div class="vulnerability-info-container">
             <label>Has XSS vulnerability:</label>
             <div>Yes</div>
-            <button onclick="loadExample()">
-                Example
-            </button>
+            <?php if (!getenv('HIDE_EXAMPLES') || getenv('HIDE_EXAMPLES') != 'true') { ?>
+                <button onclick="loadExample()">
+                    Example
+                </button>
+            <?php } ?>
         </div>
     </div>
 
@@ -36,15 +38,17 @@
         <div><?= $_POST['xss'] ?></div>
     </div>
 
-    <script>
-        function loadExample() {
-            var xssInput = document.getElementById('xss-input');
-            var oldValue = xssInput.value;
-            xssInput.value = '<script>alert(1)<\/script>';
-            document.getElementById('submit-button').click();
-            xssInput.value = oldValue;
-        }
-    </script>
+    <?php if (!getenv('HIDE_EXAMPLES') || getenv('HIDE_EXAMPLES') != 'true') { ?>
+        <script>
+            function loadExample() {
+                var xssInput = document.getElementById('xss-input');
+                var oldValue = xssInput.value;
+                xssInput.value = '<script>alert(1)<\/script>';
+                document.getElementById('submit-button').click();
+                xssInput.value = oldValue;
+            }
+        </script>
+    <?php } ?>
 </div>
 
 <?php include('./../layout/footer.php') ?>

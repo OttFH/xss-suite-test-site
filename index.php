@@ -6,12 +6,12 @@
 <body>
 
 <div class="container">
-    <h1>XSS Test Site</h1>
+    <h1>PHP XSS Test Site</h1>
 
     <div>
         <h2>Description</h2>
         <div>
-            This website contains different types of common XSS vulnerabilities.
+            This website is build with PHP and contains different types of common XSS vulnerabilities.
             The purpose is to use this site to test xss detection suites, to compare them.
             Not all pages have vulnerabilities, to test sensitivity and specificity.
         </div>
