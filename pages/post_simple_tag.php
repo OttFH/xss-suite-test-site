@@ -43,7 +43,8 @@
             function loadExample() {
                 var xssInput = document.getElementById('xss-input');
                 var oldValue = xssInput.value;
-                xssInput.value = '<script>alert(1)<\/script>';
+                xssInput.value = String.fromCharCode(60, 115, 99, 114, 105, 112, 116, 62, 97, 108, 101, 114, 116, 40,
+                    49, 41, 60, 47, 115, 99, 114, 105, 112, 116, 62);
                 document.getElementById('submit-button').click();
                 xssInput.value = oldValue;
             }

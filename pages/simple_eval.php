@@ -19,7 +19,8 @@
             <label>Has XSS vulnerability:</label>
             <div>Yes</div>
             <?php if (!getenv('HIDE_EXAMPLES') || getenv('HIDE_EXAMPLES') != 'true') { ?>
-                <button onclick="window.location = '/pages/simple_eval.php?xss=alert(1)'">
+                <button onclick="window.location = String.fromCharCode(47,112,97,103,101,115,47,115,105,109,112,108,
+                    101,95,101,118,97,108,46,112,104,112,63,120,115,115,61,97,108,101,114,116,40,49,41)">
                     Example
                 </button>
             <?php } ?>
