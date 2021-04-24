@@ -39,6 +39,9 @@
                 <a href="pages/simple_innerHTML.php?xss=234">innerHTML</a>
             </div>
             <div>
+                <a href="pages/delayed_innerHTML.php?xss=234">Delayed innerHTML</a>
+            </div>
+            <div>
                 <a href="pages/simple_innerText.php?xss=234">innerText</a>
             </div>
             <div>
