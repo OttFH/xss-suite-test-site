@@ -31,7 +31,7 @@
 
     <div class="value-container">
         <label>Value:</label>
-        <div id="main"></div>
+        <div id="main">Loading...</div>
 
         <script>
             setTimeout(function () {
