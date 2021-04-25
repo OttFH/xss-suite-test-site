@@ -86,14 +86,12 @@
             <div>
                 <a href="pages/post_simple_tag.php">Tag</a>
             </div>
-            <?php if (!getenv('HIDE_DATA_LINKS') || getenv('HIDE_DATA_LINKS') != 'true') { ?>
-                <div>
-                    <a href="pages/post_data.php">Post Data</a>
-                </div>
-                <div>
-                    <a href="pages/post_read_data.php">Read Data</a>
-                </div>
-            <?php } ?>
+            <div>
+                <a href="javascript:void" onclick="window.location = 'pages/post_data.php'">Post Data</a>
+            </div>
+            <div>
+                <a href="javascript:void" onclick="window.location = 'pages/post_read_data.php'">Read Data</a>
+            </div>
         </div>
     </div>
 </div>
