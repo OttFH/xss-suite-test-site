@@ -8,7 +8,7 @@ function deleteOldFiles($dirPath)
 
     $files = [];
     foreach (new DirectoryIterator($dirPath) as $file) {
-        if ($file->isDot() || $file->getExtension() != '.json') continue;
+        if ($file->isDot() || $file->getExtension() != 'json') continue;
 
         $files[] = $file;
     }
