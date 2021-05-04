@@ -92,6 +92,9 @@
             <div>
                 <a href="javascript:void" onclick="window.location = 'pages/post_read_data.php'">Read Data</a>
             </div>
+            <div>
+                <a href="javascript:void" onclick="window.location = 'pages/read_private_data.php'">Read Private Data</a>
+            </div>
         </div>
     </div>
 </div>
