@@ -8,7 +8,7 @@
 <div class="container">
     <?php include('./../layout/to_home.php') ?>
 
-    <h1>Simple Tag</h1>
+    <h1>Simple Read Tag</h1>
     <div>
         <h2>Description</h2>
         <div>
@@ -17,12 +17,11 @@
         </div>
     </div>
 
-    <br>
-    <div>
+    <div class="value-container">
         <label>Value:</label>
         <div>
             <?php
-            $jsonString = file_get_contents('./tmp/post_data.json');
+            $jsonString = file_get_contents('../tmp/post_data.json');
             if ($jsonString) {
                 $jsonData = json_decode($jsonString);
                 if (isset($jsonData) && isset($jsonData->xss)) {

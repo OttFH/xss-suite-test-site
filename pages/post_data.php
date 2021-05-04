@@ -27,12 +27,19 @@
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        if (!file_exists('./tmp')) {
-            mkdir('./tmp');
+        $json = json_encode($_POST);
+        if (strlen($json) < 1000) {
+            $dirPath = '../tmp';
+            if (!file_exists($dirPath)) {
+                mkdir($dirPath);
+            }
+            $fileHandle = fopen($dirPath . '/post_data.json', 'w');
+            fwrite($fileHandle, json_encode($_POST));
+            fclose($fileHandle);
+        } else {
+            http_response_code(400);
+            echo 'POST body to big.';
         }
-        $fileHandle = fopen('./tmp/post_data.json', 'w');
-        fwrite($fileHandle, json_encode($_POST));
-        fclose($fileHandle);
     }
     ?>
 </div>
