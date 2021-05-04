@@ -13,7 +13,7 @@
         <h2>Description</h2>
         <div>
             This page displays the value of the post parameter ("xss") in a div tag, which was posted to
-            <a href="/post_private_data.php">/post_private_data.php</a>.
+            <a href="/pages/post_private_data.php">/post_private_data.php</a>.
         </div>
     </div>
 
@@ -29,19 +29,26 @@
         <label>Value:</label>
         <div>
             <?php
-            $fileName = '../tmp/private/data_' . $_GET['id'] . '.json';
+            $fileName = '../tmp/private_data.json';
             if (file_exists($fileName)) {
                 $jsonString = file_get_contents($fileName);
-                $jsonData = json_decode($jsonString);
-                if (isset($jsonData) && isset($jsonData->xss)) {
-                    echo $jsonData->xss;
+                $jsonData = [];
+                if ($jsonString) {
+                    $jsonData = json_decode($jsonString);
                 }
-            } else if (strlen($_GET['id']) > 0) {
-                http_response_code(404);
-                echo 'Data with ID "' . htmlspecialchars($_GET['id']) . '" does not exist.';
-            } else {
-                http_response_code(400);
-                echo 'Please specify a ID.';
+                $id = 'id_' . $_GET['id'];
+                if (isset($jsonData->$id)) {
+                    $data = $jsonData->$id->data;
+                    if (isset($data) && isset($data->xss)) {
+                        echo $data->xss;
+                    }
+                } else if (strlen($_GET['id']) > 0) {
+                    http_response_code(404);
+                    echo 'Data with ID "' . htmlspecialchars($_GET['id']) . '" does not exist.';
+                } else {
+                    http_response_code(400);
+                    echo 'Please specify a ID.';
+                }
             }
             ?>
         </div>
